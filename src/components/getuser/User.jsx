@@ -10,7 +10,7 @@ const User = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://crud-mern-ux9a.onrender.com/api/getall"
+        "https://crud-mern-hfgb.onrender.com/api/getall"
       ); // http://localhost:8000/api/getall
       setUsers(response.data);
     };
@@ -20,7 +20,7 @@ const User = () => {
 
   const deleteUser = async (userId) => {
     await axios
-      .delete(`https://crud-mern-ux9a.onrender.com/api/delete/${userId}`) // http://localhost:8000/api/delete/${userId}
+      .delete(`https://crud-mern-hfgb.onrender.com/api/delete/${userId}`) // http://localhost:8000/api/delete/${userId}
       .then((respones) => {
         setUsers((prevUser) => prevUser.filter((user) => user._id !== userId));
         toast.success(respones.data.msg, { position: "top-right" });
